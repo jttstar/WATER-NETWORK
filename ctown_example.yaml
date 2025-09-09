@@ -1,0 +1,21 @@
+inp_path: data/raw/CTown.inp
+simulation:
+  duration_hours: 72
+  report_timestep_min: 60
+nodes:
+  sources:
+    RES1: 1000.0
+  sinks:
+    JUNCTION-101: 120.0
+    JUNCTION-205: 80.0
+edge_capacity_defaults:
+  base_capacity_m3ph: 100.0
+edge_cost_defaults:
+  base_weight: 1.0
+scenarios:
+  demand_profile: daily
+  demand_noise_std: 0.05
+  random_seed: 42
+output:
+  processed_dir: data/processed
+  tag: ctown_demo
